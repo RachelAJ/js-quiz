@@ -2,9 +2,75 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
+const myQuestions = [
+    {
+        question: "Which is the brightest planet in the night sky?",
+        answers: {
+            A: "Venus",
+            B: "Saturn",
+            C: "Jupiter"
+        },
+        correctAnswer: "A"
+    },
+    {
+        question: "Which planet is closest in size to Earth?",
+        answers: {
+            A: "Mercury",
+            B: "Mars",
+            C: "Neptune"
+        },
+        correctAnswer: "B"
+    },
+    {
+        question: "How many Planets are in our Solar System?",
+        answers: {
+            A: "7",
+            B: "10",
+            C: "8"
+        },
+        correctAnswer: "C"
+    },
+    {
+        question: "How long does it take for the Sun's rays to reach Earth?",
+        answers: {
+            A: "2 Minutes",
+            B: "8 Minutes",
+            C: "15 Minutes"
+        },
+        correctAnswer: "B"
+    },
+    {
+        question: "Who was the first person to walk on the Moon?",
+        answers: {
+            A: "Michael Collins",
+            B: "Buzz Aldrin",
+            C: "Neil Armstrong"
+        },
+        correctAnswer: "C"
+    }
+];
+
 function buildQuiz() {
-    
-}
+    const output = [];
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+        const answers = [];
+        for(letter in currentQuestion.answers){
+            answers.push(
+                `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                </label>`
+            );
+        }
+        output.push(
+            `<div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join('')} </div>`
+        )}
+    )
+    quizContainer.innerHTML = output.join('');
+};
+
 
 function getResults() {
 
@@ -14,50 +80,5 @@ buildQuiz();
 
 submitButton.addEventListener('click', getResults);
 
-const quizQuestions = [
-    {
-        question: "Which is the brightest planet in the night sky?",
-        answers: {
-            a: "Venus",
-            b: "Saturn",
-            c: "Jupiter"
-        },
-        correctAnswer: "a"
-    },
-    {
-        question: "Which planet is closest in size to Earth?",
-        answers: {
-            a: "Mercury",
-            b: "Mars",
-            c: "Neptune"
-        },
-        correctAnswer: "b"
-    },
-    {
-        question: "How many Planets are in our Solar System?",
-        answers: {
-            a: "7",
-            b: "10",
-            c: "8"
-        },
-        correctAnswer: "c"
-    },
-    {
-        question: "How long does it take for the Sun's rays to reach Earth?",
-        answers: {
-            a: "2 Minutes",
-            b: "8 Minutes",
-            c: "15 Minutes"
-        },
-        correctAnswer: "b"
-    },
-    {
-        question: "Who was the first person to walk on the Moon?",
-        answers: {
-            a: "Michael Collins",
-            b: "Buzz Aldrin",
-            c: "Neil Armstrong"
-        },
-        correctAnswer: "c"
-    }
-];
+
+

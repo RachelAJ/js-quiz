@@ -1,0 +1,12 @@
+button {
+    color: white;
+    background-color: rgb(2, 2, 54);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: grey;
+    transition: all 0.5s ease;
+}
