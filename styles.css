@@ -25,3 +25,8 @@ label {
     font-size: 20px;
     padding: 20px;
 }
+
+#results {
+    font-weight: bold;
+    padding: 10px;
+}

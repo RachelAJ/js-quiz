@@ -88,15 +88,23 @@ function showResults() {
     }
     
   });
-  resultsContainer.innerHTML = `You got ${numCorrect} out of ${myQuestions.length} correct!`;
-}
+
+if (numCorrect === 5) {
+    resultsContainer.innerHTML = `Congrats! You got ${numCorrect} out of ${myQuestions.length} correct!`;
+} else if (numCorrect === 4) {
+    resultsContainer.innerHTML = `Pretty Good! You got ${numCorrect} out of ${myQuestions.length} correct!`;
+} else if (numCorrect === 3) {
+    resultsContainer.innerHTML = `Not bad! You got ${numCorrect} out of ${myQuestions.length} correct!`;
+} else if (numCorrect => 2)
+    resultsContainer.innerHTML = `Yikes! You got ${numCorrect} out of ${myQuestions.length} correct.`;
+} 
 
 buildQuiz();
 
 submitButton.addEventListener('click', showResults)   
 document.getElementById('submit').addEventListener('click', function() {
     this.textContent = 'Blast Off!';
-  });
+});
 
 
 
