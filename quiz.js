@@ -82,18 +82,23 @@ function showResults() {
 
         if(userAnswer === currentQuestion.correctAnswer){
             numCorrect++;
-            answerContainers[questionNumber].style.color = 'lightgreen';
+            answerContainers[questionNumber].style.color = 'green';
         } else {
             answerContainers[questionNumber].style.color = 'red';
     }
     
   });
-  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  resultsContainer.innerHTML = `You got ${numCorrect} out of ${myQuestions.length} correct!`;
 }
 
 buildQuiz();
 
-submitButton.addEventListener('click', showResults);
+submitButton.addEventListener('click', showResults)   
+document.getElementById('submit').addEventListener('click', function() {
+    this.textContent = 'Blast Off!';
+  });
+
+
 
 
 
