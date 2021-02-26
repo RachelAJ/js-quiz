@@ -17,7 +17,7 @@ button:hover {
 
 label {
     font-size: 16px;
-    padding: 10px;
+    padding: 5px;
     align-items: center;
 }
 
@@ -29,4 +29,8 @@ label {
 #results {
     font-weight: bold;
     padding: 10px;
+}
+
+.answers label {
+    display: block;
 }
