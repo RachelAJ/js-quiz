@@ -1,5 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-image: url('img/moon-view.jpg');
 }
 
 button {
@@ -8,6 +10,8 @@ button {
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
     padding: 10px;
+    margin-left: 190px;
+    margin-top: 30px;
 }
 
 button:hover {
@@ -17,20 +21,27 @@ button:hover {
 
 label {
     font-size: 16px;
-    padding: 5px;
+    padding: 3px;
     align-items: center;
-}
-
-#quiz {
-    font-size: 20px;
-    padding: 20px;
-}
-
-#results {
-    font-weight: bold;
-    padding: 10px;
 }
 
 .answers label {
     display: block;
 }
+
+.question {
+    font-weight: bold;
+}
+
+#quiz {
+    font-size: 20px;
+    padding-left: 100px;
+    margin-top: 50px;
+}
+
+#results {
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 150px;
+}
+
