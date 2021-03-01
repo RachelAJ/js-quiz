@@ -45,3 +45,12 @@ label {
     margin-left: 150px;
 }
 
+#countdown {
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+}
+
+.cd {
+    margin-left: 200px;
+}
