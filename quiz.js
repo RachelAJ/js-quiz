@@ -117,8 +117,8 @@ const interval = setInterval(function() {
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    document.getElementById("countdown").innerHTML = days + " day(s) : " + hours + " hour(s) : "
+    + minutes + " minute(s) : " + seconds + " second(s) ";
     if (distance < 0) {
         clearInterval(interval);
         document.getElementById("demo").innerHTML = "EXPIRED";
