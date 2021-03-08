@@ -1,6 +1,8 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+const card = document.querySelector('.card'); 
+// const API_KEY = "THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr"
 
 const myQuestions = [
     {
@@ -121,8 +123,29 @@ const interval = setInterval(function() {
     + minutes + " minute(s) : " + seconds + " second(s) ";
     if (distance < 0) {
         clearInterval(interval);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        document.getElementById("countdown").innerHTML = "EXPIRED";
       }
     }, 1000);
 
+
+// ----- NASA Astronomy Pic of the Day API Request -----
+
+const searchButton = document.querySelector("#search")
+
+searchButton.addEventListener("click", () => {
+    console.log("button pressed")
+    apiRequest()
+});
+
+async function apiRequest() {
+    const API_KEY = "THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr"
+    const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr');
+    const data = await response.json();
+    useApiData(data)
+}
+
+function useApiData(data) {
+    document.querySelector("#content").innerHTML += `<img src="${data.url}">`
+    document.querySelector("#content").innerHTML += data.explanation
+}
 

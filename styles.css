@@ -1,3 +1,12 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
 body {
     font-family: 'Open Sans Condensed', sans-serif;
     color: white;
@@ -61,7 +70,7 @@ button:hover {
     padding: 10px;
     margin-left: 155px;
     font-size: 25px;
-    color: black;
+    color: goldenrod;
     text-shadow: 2px 2px gray;
 }
 
