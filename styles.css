@@ -101,3 +101,31 @@ button:hover {
     color: goldenrod;
 }
 
+/* ------ NASA APOD API ------ */
+
+#content,
+#search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#search {
+    margin: 0 auto;
+}
+
+/* ------ Media Queries ------ */
+
+@media (max-width: 672px) {
+    #countdown {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1032px) {
+    .cd-heading {
+        text-align: center;
+    }
+}
+
