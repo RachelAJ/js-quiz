@@ -1,8 +1,9 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
-const card = document.querySelector('.card'); 
-// const API_KEY = "THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr"
+const searchButton = document.querySelector("#search");
+
+// ------ Quiz Questions ------
 
 const myQuestions = [
     {
@@ -91,6 +92,8 @@ function showResults() {
     
   });
 
+// ------ Quiz Results ------
+
 if (numCorrect === 5) {
     resultsContainer.innerHTML = `Congrats! You got ${numCorrect} out of ${myQuestions.length} correct!`;
 } else if (numCorrect === 4) {
@@ -109,7 +112,7 @@ document.getElementById('submit').addEventListener('click', function() {
 });
 
 
-// ----- Start Countdown Code -----
+// ------ Start Countdown Code ------
 
 const countDownDate = new Date("April 20, 2021 16:00:00").getTime();
 const interval = setInterval(function() {
@@ -128,24 +131,21 @@ const interval = setInterval(function() {
     }, 1000);
 
 
-// ----- NASA Astronomy Pic of the Day API Request -----
-
-const searchButton = document.querySelector("#search")
-
-searchButton.addEventListener("click", () => {
-    console.log("button pressed")
-    apiRequest()
-});
+// ------ NASA Astronomy Pic of the Day API Request ------
 
 async function apiRequest() {
     const API_KEY = "THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr"
     const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr');
     const data = await response.json();
-    useApiData(data)
+    useApiData(data);
+    console.log(response); //added console.log to show fetch response in browser
 }
 
 function useApiData(data) {
-    document.querySelector("#content").innerHTML += `<img src="${data.url}">`
-    document.querySelector("#content").innerHTML += data.explanation
+    document.querySelector("#content").innerHTML += `<img src="${data.url}">`;
+    document.querySelector("#content").innerHTML += data.explanation;
 }
 
+searchButton.addEventListener("click", () => {
+    apiRequest()
+});
