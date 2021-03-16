@@ -14,3 +14,5 @@ For the quiz the user will answers the questions displayed on the page. Once the
 For the countdown portion of the webpage, I used Math.floor to calculate and display the amount of time left until the next the next SpaceX rocket launch with Astronauts on board which will happen on April 20, 2021.
 
 Last but not least, I used fetch() to get the NASA Astronomy Picture of the Day (APOD) API along with an API key to retrieve and display the APOD once the "Click here for the Astronomy Pic of the Day" button is clicked. It will also display the description of the picture as well. 
+
+CSS Media Queries are also incorporated to make webpage responsive.
