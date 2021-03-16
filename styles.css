@@ -117,8 +117,19 @@ button:hover {
 
 /* ------ Media Queries ------ */
 
+@media (min-width: 678px) {
+    header,
+    button {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 @media (max-width: 672px) {
-    #countdown {
+    #countdown,
+    .question,
+    #quiz {
         text-align: center;
     }
 }
