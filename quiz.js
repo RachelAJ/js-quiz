@@ -53,6 +53,8 @@ const myQuestions = [
     }
 ];
 
+// ------ Quiz Logic ------
+
 function buildQuiz() {
     const output = [];
     myQuestions.forEach( (currentQuestion, questionNumber) => {
