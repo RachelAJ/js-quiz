@@ -1,7 +1,7 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
-const searchButton = document.querySelector("#search");
+const searchButton = document.querySelector("#search"); // Comment
 
 // ------ Quiz Questions ------
 
@@ -94,6 +94,7 @@ function showResults() {
     
   });
 
+  // Start comment section
 // ------ Quiz Results ------
 
 if (numCorrect === 5) {
@@ -102,9 +103,9 @@ if (numCorrect === 5) {
     resultsContainer.innerHTML = `Pretty Good! You got ${numCorrect} out of ${myQuestions.length} correct!`;
 } else if (numCorrect === 3) {
     resultsContainer.innerHTML = `Not bad! You got ${numCorrect} out of ${myQuestions.length} correct!`;
-} else if (numCorrect => 2)
+} else if (numCorrect => 2) // Comment
     resultsContainer.innerHTML = `Yikes! You got ${numCorrect} out of ${myQuestions.length} correct.`;
-} 
+} // End comment section
 
 buildQuiz();
 
@@ -136,7 +137,7 @@ const interval = setInterval(function() {
 // ------ NASA Astronomy Pic of the Day API Request ------
 
 async function apiRequest() {
-    const API_KEY = "THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr"
+    const API_KEY = "THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr" // Comment
     const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr');
     const data = await response.json();
     useApiData(data);
