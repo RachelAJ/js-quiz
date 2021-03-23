@@ -1,7 +1,7 @@
 My initial project idea was to just make a quiz, but then it turned into a webpage all about space! The three requirements I chose to meet were:
 
 1. Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application:
-    I created and array to store my quiz questions and display them on the quiz page.
+    I created and array to store my quiz questions and display them on the quiz portion of the page.
 
 2. Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event):
     I created a countdown on the webpage that displays how many days, hours, minutes, and seconds left until the next SpaceX launch with Astronauts onboard.
