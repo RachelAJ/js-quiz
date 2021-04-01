@@ -140,7 +140,7 @@ async function apiRequest() {
     const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=THm6qyEQuC6JGi8JrX3HxPCR8RY7DtWHgsvBJEPr');
     const data = await response.json();
     useApiData(data);
-    console.log(response); //added console.log to show fetch response in browser
+    console.log(response); //added console.log to show fetch response in browser dev tools
 }
 
 function useApiData(data) {
